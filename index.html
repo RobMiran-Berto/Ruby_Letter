@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ruby Andrea Franco ❤️</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #4a2632;
+    background: radial-gradient(circle at top, #fff5f7 0%, #f8dfe5 45%, #e9b8c4 100%);
+    overflow-x: hidden;
+  }
+  .hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .heart {
+    position: absolute;
+    bottom: -40px;
+    font-size: 22px;
+    animation: float 9s linear infinite;
+    opacity: .55;
+  }
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: .6; }
+    100% { transform: translateY(-115vh) rotate(360deg); opacity: 0; }
+  }
+  .wrap { position: relative; z-index: 1; max-width: 850px; margin: auto; padding: 30px 18px 60px; }
+  .hero, .card {
+    background: rgba(255,255,255,.82);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    box-shadow: 0 15px 45px rgba(105,43,60,.16);
+    border: 1px solid rgba(255,255,255,.8);
+  }
+  .hero { text-align: center; padding: 55px 25px; margin-bottom: 22px; }
+  .small { letter-spacing: 3px; text-transform: uppercase; font-size: 12px; color: #9b5367; }
+  h1 { font-size: clamp(42px, 9vw, 78px); margin: 12px 0 4px; font-weight: normal; color: #8e314e; }
+  h2 { color: #8e314e; font-weight: normal; }
+  .subtitle { font-size: 19px; line-height: 1.6; }
+  .card { padding: 30px; margin: 22px 0; }
+  .letter p { font-size: 18px; line-height: 1.85; margin: 0 0 18px; }
+  .signature { text-align: right; font-size: 22px; font-style: italic; color: #8e314e; }
+  button {
+    border: 0; border-radius: 999px; padding: 13px 20px; margin: 7px;
+    background: #8e314e; color: white; font-size: 15px; cursor: pointer;
+    box-shadow: 0 7px 18px rgba(142,49,78,.22);
+  }
+  button:hover { transform: translateY(-1px); background: #74283f; }
+  .note {
+    display: none; margin-top: 20px; padding: 22px; border-left: 4px solid #c96b82;
+    background: #fff7f8; border-radius: 12px; font-size: 18px; line-height: 1.7;
+  }
+  .note.show { display: block; animation: fade .5s ease; }
+  @keyframes fade { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform:none; } }
+  .memory { text-align:center; font-style:italic; line-height:1.8; }
+  footer { text-align:center; padding-top:20px; color:#754252; }
+
+  .modal {
+    display: none; position: fixed; inset: 0; z-index: 20;
+    align-items: center; justify-content: center; padding: 22px;
+    background: rgba(55, 20, 32, .62); backdrop-filter: blur(7px);
+  }
+  .modal.open { display: flex; animation: modalIn .35s ease; }
+  @keyframes modalIn { from { opacity: 0; } to { opacity: 1; } }
+  .love-card {
+    width: min(620px, 100%); position: relative; padding: 42px 32px 35px;
+    background: linear-gradient(145deg, #fffafb, #fff0f3);
+    border-radius: 28px; text-align: center;
+    box-shadow: 0 25px 80px rgba(0,0,0,.28);
+    border: 1px solid rgba(255,255,255,.9);
+    animation: cardIn .45s cubic-bezier(.2,.8,.2,1);
+  }
+  @keyframes cardIn {
+    from { transform: scale(.82) translateY(25px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
+  }
+  .love-card .rose { font-size: 42px; margin-bottom: 8px; }
+  .love-card h3 { margin: 0 0 18px; color: #8e314e; font-size: 28px; font-weight: normal; }
+  .love-card p { font-size: 19px; line-height: 1.8; margin: 0; }
+  .close-modal {
+    position: absolute; top: 12px; right: 15px; margin: 0; padding: 6px 12px;
+    background: transparent; color: #8e314e; font-size: 28px;
+    box-shadow: none;
+  }
+  .close-modal:hover { background: transparent; color: #5d2032; }
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts"></div>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="small">A letter from Berto</div>
+    <h1>Ruby Andrea Franco ❤️</h1>
+    <div class="subtitle">There are some things I should have said better, sooner, and with more honesty.</div>
+  </section>
+
+  <section class="card letter">
+    <h2>I'm Sorry, Ruby.</h2>
+
+    <p>Ruby, I don't even know if these words can fully explain what has been on my heart, but I need you to know that I am truly sorry.</p>
+
+    <p>I was wrong. I was wrong about so many things, and I hate that it took losing you and being without you for me to understand some of them. I can look back now and see the moments where I could have listened better, communicated better, understood you better, and simply loved you the way you deserved to be loved.</p>
+
+    <p>I don't want to make excuses for myself. I don't want to explain away the things I did wrong. I just want to take responsibility for them. You deserved patience. You deserved understanding. You deserved to feel safe, appreciated, heard, and loved. I'm sorry for every moment when I made you feel otherwise.</p>
+
+    <p>The hardest part is that I can't stop thinking about you. No matter how much I try to distract myself, somehow my mind finds its way back to you. I miss your presence. I miss talking to you. I miss the little things that I probably didn't appreciate enough while I had them.</p>
+
+    <p>I still look at the letter you made me for Valentine's Day. I look at it every day. I don't just see words on a page when I look at it. I see you. I see the love and time you put into making it for me, and it reminds me of how lucky I was to have someone who cared about me that deeply.</p>
+
+    <p>And I still look through our pictures from the zoos. I'll see one and suddenly I'm back there with you, remembering the day, the little moments, the laughs, and what it felt like to have you beside me. Those memories mean more to me now than I can put into words.</p>
+
+    <p>I miss you, Ruby. I miss us. And more than anything, I wish I could go back and handle things differently. If I could have another chance, I would want to show you—not just tell you—that I understand where I went wrong and that I am willing to do the work to become better.</p>
+
+    <p>I love you. I have loved you, and being apart has made me realize just how deeply that love is rooted in me. I don't expect an apology to erase anything or make everything okay. I know I can't ask you to forget what happened. I can only tell you the truth: <strong>I am sorry, I love you, I miss you, and I wish we were together again.</strong></p>
+
+    <p>If there is ever a day when you are willing to talk to me again, I would be grateful for the chance to listen—not argue, not defend myself, not try to prove that I was right. Just listen to you.</p>
+
+    <p>Whatever happens, I hope you always know that you mattered to me more than I knew how to express. You still do.</p>
+
+    <div class="signature">— Berto ❤️</div>
+  </section>
+
+  <section class="card">
+    <h2>Love Notes For You</h2>
+    <p>Tap each one. These are written in the spirit of classic movie romances, rather than copied word-for-word.</p>
+    <div style="text-align:center">
+      <button type="button" data-note="0">🎬 Note One</button>
+      <button type="button" data-note="1">🌹 Note Two</button>
+      <button type="button" data-note="2">✨ Note Three</button>
+      <button type="button" data-note="3">💌 Note Four</button>
+      <button type="button" data-note="4">❤️ Note Five</button>
+    </div>
+    <div style="text-align:center; margin-top:18px; color:#8a5262; font-style:italic;">
+      Tap a note and let me tell you something I wish I could say to you in person. ❤️
+    </div>
+  </section>
+
+  <section class="card memory">
+    <h2>The Memories I Keep</h2>
+    <p>Valentine's Day. Your letter. The zoo. Our pictures. The little moments that probably seemed ordinary at the time.</p>
+    <p>Those aren't just memories to me. They're pieces of a chapter of my life that I still hold close.</p>
+    <p>And if I could write one more chapter with you, I'd want to do it differently—with more patience, more understanding, more communication, and a whole lot more appreciation for you.</p>
+  </section>
+
+
+<div class="modal" id="loveModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="love-card">
+    <button type="button" class="close-modal" id="closeModal" aria-label="Close">×</button>
+    <div class="rose" id="modalRose">🌹</div>
+    <h3 id="modalTitle">A Love Note</h3>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+  <footer>
+    Made with love, regret, and hope.<br>
+    <strong>Berto → Ruby Andrea Franco ❤️</strong>
+  </footer>
+</div>
+
+<script>
+const notes = [
+  "If I could freeze one moment in time, I would choose a moment when you were beside me and neither of us knew how precious it would become. That's how I feel about so many memories with you.",
+  "Some love stories are written in grand gestures. Ours was written in conversations, pictures, ordinary days, laughter, and the little moments between them. Those are the moments I miss the most.",
+  "If loving someone means choosing them again and again, then I would choose you—not because our story was perfect, but because you were worth every lesson I learned from it.",
+  "There are people you meet and remember, and there are people who become part of the way you see the world. You became part of mine, Ruby. That's why your absence feels so much bigger than I expected.",
+  "If I ever get the chance to stand beside you again, I don't want to promise perfection. I want to promise effort, honesty, patience, and a love that listens. I would want to earn your trust again, one day at a time."
+];
+const modal = document.getElementById('loveModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalText = document.getElementById('modalText');
+const modalRose = document.getElementById('modalRose');
+const closeModal = document.getElementById('closeModal');
+
+const noteTitles = [
+  "A Moment I'd Keep",
+  "Our Little Love Story",
+  "If I Had Another Chance",
+  "You Became Part of Me",
+  "I Still Choose You"
+];
+
+const noteRoses = ["🎬", "🌹", "✨", "💌", "❤️"];
+
+function showNote(i) {
+  modalTitle.textContent = noteTitles[i];
+  modalText.textContent = notes[i];
+  modalRose.textContent = noteRoses[i];
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-note]').forEach(button => {
+  button.addEventListener('click', () => showNote(Number(button.dataset.note)));
+});
+
+closeModal.addEventListener('click', hideModal);
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) hideModal();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && modal.classList.contains('open')) hideModal();
+});
+
+for (let i=0; i<18; i++) {
+  const h = document.createElement('div');
+  h.className = 'heart';
+  h.textContent = ['❤️','💕','💗','♡'][i%4];
+  h.style.left = (Math.random()*100) + '%';
+  h.style.animationDelay = (Math.random()*8) + 's';
+  h.style.animationDuration = (7 + Math.random()*6) + 's';
+  h.style.fontSize = (16 + Math.random()*18) + 'px';
+  document.getElementById('hearts').appendChild(h);
+}
+</script>
+</body>
+</html>
